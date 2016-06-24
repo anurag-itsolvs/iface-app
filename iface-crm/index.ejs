@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="itsApp">
+<head>
+    <base href="/">
+    <link rel="icon" href="client/assets/images/favicon.png" type="image/png" sizes="16x16">
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>itsCRM.</title>
+
+    <!-- Global stylesheets -->
+    <!--<link rel="stylesheet" href="bower_components/angular-material/angular-material.min.css"/>-->
+    <link href="client/assets/css/mycss.css" rel="stylesheet" type="text/css">
+    <link href="client/assets/css/css.css" rel="stylesheet" type="text/css">
+    <link href="client/assets/css/styles.css" rel="stylesheet" type="text/css">
+    <link href="client/assets/css/bootstrap.css" rel="stylesheet" type="text/css">
+    <link href="client/assets/css/core.css" rel="stylesheet" type="text/css">
+    <link href="client/assets/css/components.css" rel="stylesheet" type="text/css">
+    <link href="client/assets/css/colors.css" rel="stylesheet" type="text/css">
+    <link href="bower_components/summernote/dist/summernote.css" rel="stylesheet" type="text/css">
+
+
+     <!-- /global stylesheets -->
+
+    <!-- Core JS files -->
+
+
+   <!-- <script  src="bower_components/angular-animate/angular-animate.js"></script>
+    <script  src="bower_components/angular-aria/angular-aria.min.js"></script>
+    <script  src="bower_components/angular-material/angular-material.min.js"></script>
+    <script src="bower_components/angular-messages/angular-messages.js"></script>-->
+
+    <script type="text/javascript" src="bower_components/jquery/dist/jquery.min.js"></script>
+    <script type="text/javascript" src="bower_components/jquery-ui/jquery-ui.js"></script>
+    <script type="text/javascript" src="bower_components/moment.min.js"></script>
+    <script type="text/javascript" src="bower_components/daterangepicker.js"></script>
+    <script type="text/javascript" src="bower_components/select2/dist/js/select2.min.js"></script>
+    <script type="text/javascript" src="bower_components/angular/angular.min.js"></script>
+    <script type="text/javascript" src="bower_components/angular-ui-router/release/angular-ui-router.min.js"></script>
+    <script type="text/javascript" src="bower_components/angular-moment/angular-moment.min.js"></script>
+
+
+     <script type="text/javascript" src="bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+     <script type="text/javascript" src="bower_components/fullcalendar/dist/fullcalendar.js"></script>
+     <script type="text/javascript" src="bower_components/summernote/dist/summernote.js"></script>
+     <script type="text/javascript" src="bower_components/angular-summernote/src/angular-summernote.js"></script>
+     <script type="text/javascript" src="client/assets/js/base64.js"></script>
+    <script type="text/javascript" src="bower_components/ng-file-upload-shim/ng-file-upload-shim.min.js"></script> <!-- for no html5 browsers support -->
+    <script type="text/javascript" src="bower_components/ng-file-upload/ng-file-upload.min.js"></script>
+
+    <!-- /core JS files -->
+
+    <!-- Theme JS files -->
+
+    <!--<script type="text/javascript" src="./helpingFiles/datatables.min.js"></script>-->
+    <!--<script type="text/javascript" src="./helpingFiles/buttons.min.js"></script>-->
+    <script type="text/javascript" src="./helpingFiles/select2.min.js"></script>
+
+
+
+    <!--<script type="text/javascript" src="client/assets/js/app.js"></script>
+    <script type="text/javascript" src="client/assets/js/myjs.js"></script>-->
+    <script type="text/javascript" src="client/app/its-app-start.js"></script>
+
+    <script type="text/javascript" src="client/app/common/common-services-module.js"></script>
+    <script type="text/javascript" src="client/app/common/common-directives-module.js"></script>
+    <script type="text/javascript" src="client/app/common/common-controller-module.js"></script>
+
+    <script type="text/javascript" src="client/app/login/login.js"></script>
+
+    <script type="text/javascript" src="client/app/dashboard/dashboard.js"></script>
+
+    <script type="text/javascript" src="client/app/leads/leads.js"></script>
+    <script type="text/javascript" src="client/app/leads/create/lead-create.js"></script>
+    <script type="text/javascript" src="client/app/leads/edit/lead-edit.js"></script>
+    <script type="text/javascript" src="client/app/leads/update/lead-update.js"></script>
+    <script type="text/javascript" src="client/app/leads/delete/lead-delete.js"></script>
+    <script type="text/javascript" src="client/app/leads/list/lead-list.js"></script>
+
+    <script type="text/javascript" src="client/app/people/people.js"></script>
+    <script type="text/javascript" src="client/app/people/create/people-create.js"></script>
+    <script type="text/javascript" src="client/app/people/edit/people-edit.js"></script>
+    <script type="text/javascript" src="client/app/people/update/people-update.js"></script>
+    <script type="text/javascript" src="client/app/people/delete/people-delete.js"></script>
+    <script type="text/javascript" src="client/app/people/list/people-list.js"></script>
+    <script type="text/javascript" src="client/app/people/details/people-details.js"></script>
+
+    <script type="text/javascript" src="client/app/opportunities/opportunities.js"></script>
+    <script type="text/javascript" src="client/app/opportunities/create/opportunity-create.js"></script>
+    <script type="text/javascript" src="client/app/opportunities/edit/opportunity-edit.js"></script>
+    <script type="text/javascript" src="client/app/opportunities/update/opportunity-update.js"></script>
+    <script type="text/javascript" src="client/app/opportunities/delete/opportunity-delete.js"></script>
+    <script type="text/javascript" src="client/app/opportunities/pipeline/pipeline.js"></script>
+    <script type="text/javascript" src="client/app/opportunities/list/opportunities-list.js"></script>
+
+    <script type="text/javascript" src="client/app/projects/projects.js"></script>
+    <script type="text/javascript" src="client/app/projects/create/project-create.js"></script>
+    <script type="text/javascript" src="client/app/projects/edit/project-edit.js"></script>
+    <script type="text/javascript" src="client/app/projects/update/project-update.js"></script>
+    <script type="text/javascript" src="client/app/projects/delete/project-delete.js"></script>
+    <script type="text/javascript" src="client/app/projects/list/project-list.js"></script>
+
+    <script type="text/javascript" src="client/app/company/company.js"></script>
+    <script type="text/javascript" src="client/app/company/create/company-create.js"></script>
+    <script type="text/javascript" src="client/app/company/edit/company-edit.js"></script>
+    <script type="text/javascript" src="client/app/company/update/company-update.js"></script>
+    <script type="text/javascript" src="client/app/company/delete/company-delete.js"></script>
+    <script type="text/javascript" src="client/app/company/list/company-list.js"></script>
+    <script type="text/javascript" src="client/app/company/details/company-details.js"></script>
+
+    <script type="text/javascript" src="client/app/tasks/tasks.js"></script>
+    <script type="text/javascript" src="client/app/tasks/create/task-create.js"></script>
+    <script type="text/javascript" src="client/app/tasks/edit/task-edit.js"></script>
+    <script type="text/javascript" src="client/app/tasks/update/task-update.js"></script>
+    <script type="text/javascript" src="client/app/tasks/delete/task-delete.js"></script>
+    <script type="text/javascript" src="client/app/tasks/list/task-list.js"></script>
+
+    <script type="text/javascript" src="client/app/settings/settings.js"></script>
+
+    <script type="text/javascript" src="client/app/settings/preferences/company-preferences/company-preferences.js"></script>
+    <script type="text/javascript" src="client/app/settings/preferences/email-settings/email-settings.js"></script>
+    <script type="text/javascript" src="client/app/settings/preferences/google-sync-settings/google-sync-settings.js"></script>
+    <script type="text/javascript" src="client/app/settings/preferences/my-preferences/my-preferences.js"></script>
+    <script type="text/javascript" src="client/app/settings/preferences/notifications/notifications.js"></script>
+
+    <script type="text/javascript" src="client/app/settings/manage-users/company-users/company-users.js"></script>
+    <script type="text/javascript" src="client/app/settings/manage-users/teams/teams.js"></script>
+
+    <script type="text/javascript" src="client/app/settings/customize-itscrm/activity-types/activity-types.js"></script>
+    <script type="text/javascript" src="client/app/settings/customize-itscrm/automated-actions/automated-actions.js"></script>
+    <script type="text/javascript" src="client/app/settings/customize-itscrm/automated-actions/create/new-automated-actions.js"></script>
+
+    <script type="text/javascript" src="client/app/settings/customize-itscrm/contact-types/contact-types.js"></script>
+    <script type="text/javascript" src="client/app/settings/customize-itscrm/custom-fields/custom-fields.js"></script>
+    <script type="text/javascript" src="client/app/settings/customize-itscrm/detail-field-order/detail-field-order.js"></script>
+    <script type="text/javascript" src="client/app/settings/customize-itscrm/integrations/integrations.js"></script>
+    <script type="text/javascript" src="client/app/settings/customize-itscrm/lead-management/lead-management.js"></script>
+    <script type="text/javascript" src="client/app/settings/customize-itscrm/loss-reasons/loss-reasons.js"></script>
+    <script type="text/javascript" src="client/app/settings/customize-itscrm/pipelines/pipelines.js"></script>
+    <script type="text/javascript" src="client/app/settings/customize-itscrm/sources/sources.js"></script>
+    <script type="text/javascript" src="client/app/settings/customize-itscrm/tag-management/tag-management.js"></script>
+
+    <script type="text/javascript" src="client/app/settings/data-management/export-data/export-data.js"></script>
+    <script type="text/javascript" src="client/app/settings/data-management/import-data/import-data.js"></script>
+
+    <script type="text/javascript" src="client/app/settings/data-management/import-data/import-organizations/import-organizations.js"></script>
+    <script type="text/javascript" src="client/app/settings/data-management/import-data/import-organizations/import-csv/import-csv.js"></script>
+    <script type="text/javascript" src="client/app/settings/data-management/import-data/import-organizations/import-excel/import-excel.js"></script>
+    <script type="text/javascript" src="client/app/settings/data-management/import-data/import-organizations/import-google-sheets/import-google-sheets.js"></script>
+    <script type="text/javascript" src="client/app/settings/data-management/import-data/import-organizations/other/other.js"></script>
+
+    <script type="text/javascript" src="client/app/settings/data-management/import-data/import-contacts/import-contacts.js"></script>
+    <script type="text/javascript" src="client/app/settings/data-management/import-data/import-contacts/import-csv/import-csv.js"></script>
+    <script type="text/javascript" src="client/app/settings/data-management/import-data/import-contacts/import-excel/import-excel.js"></script>
+    <script type="text/javascript" src="client/app/settings/data-management/import-data/import-contacts/import-google-sheets/import-google-sheets.js"></script>
+    <script type="text/javascript" src="client/app/settings/data-management/import-data/import-contacts/other/other.js"></script>
+
+    <script type="text/javascript" src="client/app/settings/data-management/import-data/import-opportunities/import-opportunities.js"></script>
+    <script type="text/javascript" src="client/app/settings/data-management/import-data/import-opportunities/import-csv/import-csv.js"></script>
+    <script type="text/javascript" src="client/app/settings/data-management/import-data/import-opportunities/import-excel/import-excel.js"></script>
+    <script type="text/javascript" src="client/app/settings/data-management/import-data/import-opportunities/import-google-sheets/import-google-sheets.js"></script>
+    <script type="text/javascript" src="client/app/settings/data-management/import-data/import-opportunities/other/other.js"></script>
+
+
+    <script type="text/javascript" src="client/app/settings/account/billing/billing.js"></script>
+
+    <script type="text/javascript" src="client/app/billing/billing.js"></script>
+
+    <script type="text/javascript" src="client/app/itscrm-apps/itscrm-calendar/itscrm-calendar.js"></script>
+    <script type="text/javascript" src="client/app/itscrm-apps/itscrm-contacts/itscrm-contacts.js"></script>
+    <script type="text/javascript" src="client/app/itscrm-apps/itscrm-drive/itscrm-drive.js"></script>
+    <script type="text/javascript" src="client/app/itscrm-apps/itscrm-mail/itscrm-mail.js"></script>
+    <script type="text/javascript" src="client/app/itscrm-apps/itscrm-mail/inbox/inbox.js"></script>
+    <script type="text/javascript" src="client/app/itscrm-apps/itscrm-mail/search/search.js"></script>
+
+    <!--<script type="text/javascript" src="./helpingFiles/datatables_extension_colvis.js"></script>-->
+    <!-- /theme JS files -->
+
+</head>
+
+<body class="pace-done sidebar-xs sidebar-secondary-hidden" cz-shortcut-listen="true">
+
+<div class="page" ui-view></div>
+
+
+</body>
+</html>
